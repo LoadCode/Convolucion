@@ -1,13 +1,15 @@
-# -*- coding: cp1252 -*-
+# -*- coding: utf-8 -*-
 
-            #ALGORITMO PARA CALCULAR LA CONVOLUCI覰
+            #ALGORITMO PARA CALCULAR LA CONVOLUCI脫N
 
-#@Author: Julio C閟ar Echeverri Marulanda
+#@Author: Julio C茅sar Echeverri Marulanda
 #@Email : julio.em7@gmail.com
 
-#Vectores a convolucionar
-a = [1,2,3]     #Vector A para la convoluci髇 (puede ser >= B)
-b = [3,2,4,6,1] #Vector B para la convoluci髇 (puede ser >= A) 
+#Vectores a convolucionar como ejemplo
+
+#a = [1,2,3]     #Vector A para la convoluci贸n (puede ser >= B)
+#b = [3,2,4,6,1] #Vector B para la convoluci贸n (puede ser >= A)
+# print convolucion(a,b)
 
 def convolucion(a,b):
     Na = len(a)
@@ -17,14 +19,14 @@ def convolucion(a,b):
     Ny = len(y)
 
 
-    #Sumatoria de convoluci髇
+    #Sumatoria de convoluci贸n
     for n in range(0,Ny):
         k = n; f = 1;
         while k >= 0:
             if n >= Na:   #Este if es para cuando el vector que va recorriendo se sale del indice de a[k]
                 k = Na-f; f += 1;
                 
-            y[n] += a[k]*b[n-k] #Ecuaci髇 de la convoluci髇
+            y[n] += a[k]*b[n-k] #Ecuaci贸n de la convoluci贸n
             k -= 1
             if (n-k) >= Nb:
                 break
