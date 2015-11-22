@@ -63,6 +63,23 @@ class TransferFunction:
     
     
 
+def num(s):
+    try:
+        return int(s)
+    except ValueError:
+        return float(s)
+
+def str2list(cad):
+    strlst = cad.split(',')
+    N = len(strlst)
+    lista = [0 for x in range(0,N)]
+    for n in range(0,N):
+        lista[n] = num(strlst[n])
+    return lista
+        
+    
+
+
 #tf = TransferFunction([1,0,2,4,3],[4,3,2,1,5,4,2,3,2,4,5,3],0,'z')
-tf = TransferFunction([9],[1,1.5,9])
-tf.Visual()
+#tf = TransferFunction([9],[1,1.5,9])
+#tf.Visual()
